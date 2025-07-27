@@ -20,6 +20,24 @@ mypy = "^1.7.1"
 black = "^24.0.0"
 isort = "^5.13.0"
 
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+skip-string-normalization = false
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+  | migrations
+  | __pycache__
+  | \.mypy_cache
+  | env
+)/
+'''
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
