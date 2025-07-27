@@ -1,8 +1,6 @@
 from fastapi import APIRouter, Depends
 
 
-
-
 router = APIRouter(tags=["auth"],prefix="/auth")
 
 @router.get("/validate")

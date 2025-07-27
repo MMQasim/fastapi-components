@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "fastapi-components-auth"
+name = "fastapi_components_auth"
 version = "0.1.0"
 description = "Reusable authentication module for FastAPI"
 authors = ["Qasim"]
@@ -12,6 +12,7 @@ python = ">=3.10"
 fastapi = "^0.116.1"
 passlib = "^1.7.4"
 python-jose = "^3.3.0"
+tree = "^0.2.4"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
