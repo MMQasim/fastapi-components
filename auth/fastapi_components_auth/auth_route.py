@@ -8,13 +8,6 @@ async def validate_auth():
     """
     Endpoint to validate authentication.
     This is a placeholder and should be replaced with actual validation logic.
-    
-    
-    
-    
-    
-    
-    
-    
     """
+    
     return {"message": "Authentication is valid"}
