@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "fastapi-components"
+version = "0.1.0"
+description = "Modular, reusable FastAPI components for scalable backend development."
+authors = ["Qasim <your-email@example.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+black = "^25.1.0"
+pre-commit = "^4.2.0"
+flake8 = "^7.3.0"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+show_error_codes = true
+warn_unused_configs = true
+pretty = true
+files = ["app"]
+check_untyped_defs = true
+disallow_untyped_calls = true
+disallow_incomplete_defs = true
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+  | migrations
+  | __pycache__
+  | \.mypy_cache
+  | env
+)/
+'''
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+skip-string-normalization = false
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+  | migrations
+  | __pycache__
+  | \.mypy_cache
+  | env
+)/
+'''
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
